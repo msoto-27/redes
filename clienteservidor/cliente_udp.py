@@ -15,7 +15,7 @@ while True:
     msg = input("Mensaje: > ")
 
     # Con el método send, enviamos el mensaje
-    # Para finalizar la conexion cliente enviar "exit", para finalizar Server "quit"
+    # Para finalizar la conexion cliente enviar "exit"
     obj.sendto(msg.encode('utf-8'), (host,port))
     data, addr = obj.recvfrom(4096)
     print("respuesta: {0}".format(data.decode("utf-8")))
